@@ -37,17 +37,19 @@ sub bundle_config {
     remove => [ qw(PodVersion BumpVersion) ],
   });
 
-  push @plugins, (
-    [ 'Dist::Zilla::Plugin::PodWeaver'      => { } ],
-    [ 'Dist::Zilla::Plugin::PerlTidy'       => { } ],
-    [ 'Dist::Zilla::Plugin::Repository'     => { } ],
-    [ 'Dist::Zilla::Plugin::ReadmeFromPod'  => { } ],
-    [ 'Dist::Zilla::Plugin::CheckChangeLog' => { } ],
+  my $prefix = 'Dist::Zilla::Plugin::';
+  my @extra = map {[ "$class/$prefix$_->[0]" => "$prefix$_->[0]" => $_->[1] ]}
+  (
+    [ PodWeaver      => { } ],
+    [ PerlTidy       => { } ],
+    [ Repository     => { } ],
+    [ ReadmeFromPod  => { } ],
+    [ CheckChangeLog => { } ],
   );
 
-  eval "require $_->[0]" or die for @plugins; ## no critic Carp
+  push @plugins, @extra;
 
-  @plugins->map(sub { $_->[1]{'=name'} = "$class/$_->[0]" });
+  eval "require $_->[1]; 1;" or die for @plugins; ## no critic Carp
 
   return @plugins;
 }
