@@ -29,12 +29,17 @@ It is equivalent to:
 use Dist::Zilla::PluginBundle::Filter;
 
 sub bundle_config {
-  my ($self, $arg) = @_;
+  my ($self, $section) = @_;
   my $class = (ref $self) || $self;
 
+  my $arg = $section->{payload};
+
   my @plugins = Dist::Zilla::PluginBundle::Filter->bundle_config({
-    bundle => '@Classic',
-    remove => [ qw(PodVersion BumpVersion) ],
+    name    => "$class/Classic",
+    payload => {
+      bundle => '@Classic',
+      remove => [ qw(PodVersion BumpVersion) ],
+    }
   });
 
   my $prefix = 'Dist::Zilla::Plugin::';
