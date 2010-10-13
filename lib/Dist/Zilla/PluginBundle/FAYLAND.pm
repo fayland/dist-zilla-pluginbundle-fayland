@@ -23,6 +23,7 @@ It is equivalent to:
     [Repository]
     [ReadmeFromPod]
     [CheckChangeLog]
+    [CompileTests]
 
 =cut
 
@@ -50,6 +51,7 @@ sub bundle_config {
     [ Repository     => { } ],
     [ ReadmeFromPod  => { } ],
     [ CheckChangeLog => { } ],
+    [ CompileTests   => { } ],
   );
 
   push @plugins, @extra;
