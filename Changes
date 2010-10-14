@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-FAYLAND
 
+0.05    2010.10.14
+        fix UNKNOWN test
+
 0.04    2010.10.13
         add CompileTests
 
