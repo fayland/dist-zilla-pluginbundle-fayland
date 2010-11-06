@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-FAYLAND
 
+0.06    2010.11.06
+        use LoadTests instead of CompileTests (because CompileTests returns 'skipped: no tests to run')
+
 0.05    2010.10.14
         fix UNKNOWN test
 
