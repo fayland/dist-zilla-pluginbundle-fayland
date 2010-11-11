@@ -24,6 +24,7 @@ It is equivalent to:
     [ReadmeFromPod]
     [CheckChangeLog]
     [LoadTests]
+    [MetaJSON]
 
 =cut
 
@@ -52,6 +53,7 @@ sub bundle_config {
     [ ReadmeFromPod  => { } ],
     [ CheckChangeLog => { } ],
     [ LoadTests      => { } ],
+    [ MetaJSON       => { } ],
   );
 
   push @plugins, @extra;
