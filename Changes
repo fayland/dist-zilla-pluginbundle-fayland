@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-FAYLAND
 
+0.09    2011.07.26
+        remove Readme
+
 0.08    2011.04.23
         from LoadTests to CompileTests
 

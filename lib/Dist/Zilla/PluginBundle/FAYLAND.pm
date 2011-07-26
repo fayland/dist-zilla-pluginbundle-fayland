@@ -17,6 +17,7 @@ It is equivalent to:
     bundle = @Classic
     remove = PodVersion
     remove = BumpVersion
+    remove = Readme
 
     [PodWeaver]
     [PerlTidy]
@@ -40,7 +41,7 @@ sub bundle_config {
     name    => "$class/Classic",
     payload => {
       bundle => '@Classic',
-      remove => [ qw(PodVersion BumpVersion) ],
+      remove => [ qw(PodVersion BumpVersion Readme) ],
     }
   });
 
