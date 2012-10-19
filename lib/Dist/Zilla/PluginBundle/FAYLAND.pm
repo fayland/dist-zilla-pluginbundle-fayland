@@ -24,7 +24,7 @@ It is equivalent to:
     [Repository]
     [ReadmeFromPod]
     [CheckChangeLog]
-    [CompileTests]
+    [Test::Compile]
     [MetaJSON]
 
 =cut
@@ -53,7 +53,7 @@ sub bundle_config {
     [ Repository     => { } ],
     [ ReadmeFromPod  => { } ],
     [ CheckChangeLog => { } ],
-    [ CompileTests   => { } ],
+    [ 'Test::Compile'=> { } ],
     [ MetaJSON       => { } ],
   );
 
