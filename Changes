@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-PluginBundle-FAYLAND
 
+0.10    2012.10.23
+        CompileTests (deprecated) => Test::Compile (Olivier Mengué dolmen)
+        DZ: Use [Bootstrap::lib] to use our own @FAYLAND for build (Olivier Mengué dolmen)
+
 0.09    2011.07.26
         remove Readme
 
