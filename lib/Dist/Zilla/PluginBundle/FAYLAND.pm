@@ -7,7 +7,7 @@ use Moose::Autobox;
 with 'Dist::Zilla::Role::PluginBundle';
 
 =head1 SYNOPSIS
- 
+
     # dist.ini
     [@FAYLAND]
 
@@ -30,6 +30,7 @@ It is equivalent to:
 =cut
 
 use Dist::Zilla::PluginBundle::Filter;
+
 
 sub bundle_config {
   my ($self, $section) = @_;
@@ -55,6 +56,7 @@ sub bundle_config {
     [ CheckChangeLog => { } ],
     [ 'Test::Compile'=> { } ],
     [ MetaJSON       => { } ],
+    [ ContributorsFromGit => { } ]
   );
 
   push @plugins, @extra;
