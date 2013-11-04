@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-FAYLAND
 
+0.12    2013-11-05
+        put Test::Compile before PerlTidy to avoid breaking text-template
+
 0.11    2013.03.13
         add ContributorsFromGit
 

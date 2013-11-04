@@ -50,11 +50,11 @@ sub bundle_config {
   my @extra = map {[ "$class/$prefix$_->[0]" => "$prefix$_->[0]" => $_->[1] ]}
   (
     [ PodWeaver      => { } ],
+    [ 'Test::Compile'=> { } ],
     [ PerlTidy       => { } ],
     [ Repository     => { } ],
     [ ReadmeFromPod  => { } ],
     [ CheckChangeLog => { } ],
-    [ 'Test::Compile'=> { } ],
     [ MetaJSON       => { } ],
     [ ContributorsFromGit => { } ]
   );
