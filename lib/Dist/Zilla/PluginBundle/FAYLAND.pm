@@ -20,11 +20,11 @@ It is equivalent to:
     remove = Readme
 
     [PodWeaver]
+    [Test::Compile]
     [PerlTidy]
     [Repository]
     [ReadmeFromPod]
     [CheckChangeLog]
-    [Test::Compile]
     [MetaJSON]
 
 =cut
