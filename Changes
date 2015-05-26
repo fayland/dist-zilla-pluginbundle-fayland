@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-FAYLAND
 
+0.14    2015-05-26
+        fix requirements
+
 0.13    2015-05-26
         replace ContributorsFromGit with Git::Contributors
 
