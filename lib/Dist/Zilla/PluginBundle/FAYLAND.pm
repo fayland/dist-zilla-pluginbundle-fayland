@@ -26,6 +26,7 @@ It is equivalent to:
     [ReadmeFromPod]
     [CheckChangeLog]
     [MetaJSON]
+    [MinimumPerlFast]
     [Git::Contributors]
 
 =cut
@@ -57,6 +58,7 @@ sub bundle_config {
     [ ReadmeFromPod  => { } ],
     [ CheckChangeLog => { } ],
     [ MetaJSON       => { } ],
+    [ MinimumPerlFast     => { } ],
     [ 'Git::Contributors' => { } ]
   );
 
